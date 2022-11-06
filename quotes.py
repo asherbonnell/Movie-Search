@@ -3,10 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Gandalf2000@localhost/movie_search'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:Gandalf2000@localhost/movie_search'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://nexcenqzelougn:5417cbb25a22e742ce31134211aad47c3cc795a9fc333db7bfa9d0d84eb6728b@ec2-3-219-135-162.compute-1.amazonaws.com:5432/dfdi5n8b83pt3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
 
 db = SQLAlchemy(app)
+
 
 class Favquotes(db.Model):
     id = db.Column(db.Integer,primary_key=True)
